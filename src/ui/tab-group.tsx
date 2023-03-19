@@ -1,4 +1,4 @@
-import { Tab } from '../../ui/tab';
+import { Tab } from '../ui/tab-group';
 
 export type Item = {
   text: string;
