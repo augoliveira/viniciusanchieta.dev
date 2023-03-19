@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import GlobalStyle from '../styles/GlobalStyle';
 import Header from '../ui/Header/page';
-import StyledComponentsRegistry from './styling/styled-components/registry';
 
 export const metadata: Metadata = {
   title: {
@@ -54,7 +53,7 @@ export default function RootLayout({
         className={`m-auto bg-main px-16 sm:px-8 xl:w-1078px xl:px-0 ${inter.className}`}
       >
         <Header />
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        {children}
         <GlobalStyle />
       </body>
     </html>
