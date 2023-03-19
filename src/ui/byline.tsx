@@ -1,4 +1,4 @@
-import { VercelLogo } from '/src/ui/vercel-logo';
+import { VercelLogo } from './vercel-logo';
 
 export default function Byline({ className }: { className: string }) {
   return (
