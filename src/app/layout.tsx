@@ -1,9 +1,15 @@
 import { type Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import GlobalStyle from '../styles/GlobalStyle';
+import Header from '../ui/Header/page';
+import StyledComponentsRegistry from './styling/styled-components/registry';
 
 export const metadata: Metadata = {
-  title: 'Vinicius Anchieta',
+  title: {
+    default: 'AGÊNCIA UP.EXPERT',
+    template: 'MARKETIGN DIGITAL EM BRASILIA | (61) 9 8669-2775'
+  },
   description:
     'Vinicius Anchieta is a highly skilled software engineer with a passion for innovation and a constant drive to learn new technologies. With expertise in HTML, CSS, JavaScript, and TypeScript, Vinicius is proficient in using ReactJS, NextJS, React Native, Material-UI, and Tailwind CSS to create attractive and intuitive user interfaces. He is also highly skilled in unit testing, ensuring the functionality and reliability of the applications he creates.',
   keywords:
@@ -28,7 +34,7 @@ export const metadata: Metadata = {
   },
   icons: [
     {
-      url: '/favicon.png',
+      url: '/favicon/favicon-32x32.png',
       sizes: '32x32',
       type: 'image/png'
     }
@@ -45,9 +51,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`bg-main px-16 sm:px-8 xl:w-1078px xl:px-0 m-auto ${inter.className}`}
+        className={`m-auto bg-main px-16 sm:px-8 xl:w-1078px xl:px-0 ${inter.className}`}
       >
-        {children}
+        <Header />
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <GlobalStyle />
       </body>
     </html>
   );

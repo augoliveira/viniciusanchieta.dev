@@ -2,10 +2,10 @@ function HeroComponent() {
   return (
     <div role='region' aria-label='Hero' className='flex flex-col gap-4'>
       <p className='text-base font-light text-white'>Hey, I'm</p>
-      <h1 className='bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 bg-clip-text text-transparent text-6xl font-semibold w-510px sm:w-full sm:text-4xl'>
+      <h1 className='w-510px bg-gradient-to-r from-purple-100 via-blue-100 to-pink-100 bg-clip-text text-6xl font-semibold text-transparent sm:w-full sm:text-4xl'>
         Vinicius Anchieta
       </h1>
-      <div className='text-lg font-light text-white text-justify flex flex-col gap-4'>
+      <div className='flex flex-col gap-4 text-justify text-lg font-light text-white'>
         <p>
           I'm a software engineer with skills in HTML, CSS, JavaScript, and
           TypeScript, and proficient in using ReactJS, NextJS, React Native,

@@ -4,7 +4,7 @@
       "version": "detect"
     }
   },
-  "plugins": ["react", "prettier", "import-helpers"],
+  "plugins": ["react", "prettier", "import-helpers", "validate-jsx-nesting"],
   "extends": [
     "plugin:react/recommended",
     "plugin:prettier/recommended",
@@ -19,6 +19,7 @@
   },
   "rules": {
     "react/no-unescaped-entities": "off",
+    "validate-jsx-nesting/no-invalid-jsx-nesting": "error",
     "prettier/prettier": [
       "warn",
       {

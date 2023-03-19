@@ -18,27 +18,27 @@ function ProjectComponent({
 
   return (
     <div
-      className='text-white flex flex-col gap-7 justify-between w-510px'
+      className='flex w-510px flex-col justify-between gap-7 text-white'
       role='region'
       aria-label='Project'
     >
       <p className='text-2xl'>{name}</p>
-      <p className='text-sm h-60px text-gray-100'>{description}</p>
+      <p className='h-60px text-sm text-gray-100'>{description}</p>
       <div className='flex w-214px items-center gap-7'>
         <button
           onClick={handleSeeNow}
-          className='rounded-md mx-auto bg-gradient-to-tr p-[0.18rem] from-purple-100 via-blue-100 to-pink-100'
+          className='mx-auto rounded-md bg-gradient-to-tr from-purple-100 via-blue-100 to-pink-100 p-[0.18rem]'
           role='button'
           aria-label={`Navigate to ${name} website`}
         >
-          <div className='bg-main rounded-md py-4 px-6 text-white [&>svg]:fill-white flex gap-2 items-center'>
+          <div className='flex items-center gap-2 rounded-md bg-main py-4 px-6 text-white [&>svg]:fill-white'>
             <ClipIcon />
             <span className='text-base'>See now</span>
           </div>
         </button>
         <button
           onClick={handleGithub}
-          className='[&>svg]:fill-white mx-auto w-30px h-30px'
+          className='mx-auto h-30px w-30px [&>svg]:fill-white'
           role='button'
           aria-label={`Navigate to ${name} GitHub repository`}
         >

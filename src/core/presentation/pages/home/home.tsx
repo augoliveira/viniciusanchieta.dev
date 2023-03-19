@@ -27,28 +27,12 @@ function HomePage({
 
   return (
     <>
-      <HeaderTag
-        items={[
-          {
-            title: 'Resume',
-            onClick: () => handleScrollToSection('resume')
-          },
-          {
-            title: 'Projects',
-            onClick: () => handleScrollToSection('projects')
-          },
-          {
-            title: 'Contact',
-            onClick: () => handleScrollToSection('contact')
-          }
-        ]}
-      />
-      <motion.section id='resume' className='mt-20 flex flex-col gap-4'>
+      <motion.section id='resume' className='mt-40 flex flex-col gap-4'>
         <HeroTag />
       </motion.section>
-      <motion.section className='flex mt-24 gap-24 sm:flex-col sm:gap-9'>
-        <p className='uppercase text-white font-light text-lg'>Experience</p>
-        <div className='w-full flex flex-col gap-8'>
+      <motion.section className='mt-24 flex gap-24 sm:flex-col sm:gap-9'>
+        <p className='text-lg font-light uppercase text-white'>Experience</p>
+        <div className='flex w-full flex-col gap-8'>
           {loadExperiencesResponse.map(experience => (
             <ExperienceTag
               key={experience.company}
@@ -64,11 +48,11 @@ function HomePage({
       </motion.section>
       <LineTag />
       <motion.section
-        className='flex flex-col mt-24 w-full gap-12 sm:gap-9'
+        className='mt-24 flex w-full flex-col gap-12 sm:gap-9'
         id='projects'
       >
-        <p className='uppercase text-white font-light text-lg'>projects</p>
-        <div className='flex flex-row flex-wrap w-full gap-7 justify-between'>
+        <p className='text-lg font-light uppercase text-white'>projects</p>
+        <div className='flex w-full flex-row flex-wrap justify-between gap-7'>
           {loadProjectsResponse.map(project => (
             <ProjectTag
               key={project.name}
@@ -81,11 +65,11 @@ function HomePage({
       </motion.section>
       <LineTag />
       <motion.footer
-        className='flex sm:flex-col gap-14 sm:gap-9 mt-24 w-full items-start justify-between mb-12'
+        className='mt-24 mb-12 flex w-full items-start justify-between gap-14 sm:flex-col sm:gap-9'
         id='contact'
       >
-        <p className='uppercase text-white font-light text-lg'>contact</p>
-        <div className='flex gap-3 flex-wrap justify-center'>
+        <p className='text-lg font-light uppercase text-white'>contact</p>
+        <div className='flex flex-wrap justify-center gap-3'>
           <SocialButtonTag
             title='Send an email'
             url='mailto:contact@viniciusanchieta.dev'

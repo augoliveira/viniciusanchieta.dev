@@ -4,7 +4,7 @@ import type { HeaderProps } from './interfaces';
 function HeaderComponent({ items }: HeaderProps) {
   return (
     <header
-      className='flex justify-between items-center h-112px text-white bg-gradient-to-b from-main via-main to-transparent'
+      className='flex h-112px items-center justify-between bg-gradient-to-b from-main via-main to-transparent text-white'
       role='region'
       aria-label='Header'
     >
@@ -16,7 +16,7 @@ function HeaderComponent({ items }: HeaderProps) {
           {items.map((item: { title: string; onClick: () => void }) => (
             <li key={item.title}>
               <button
-                className='font-light text-lg'
+                className='text-lg font-light'
                 onClick={item.onClick}
                 role='button'
                 aria-label={`Navigate to ${item.title} section`}
